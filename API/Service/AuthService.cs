@@ -55,7 +55,7 @@ namespace API.Service
         {
             IdentityUser AddUser= new IdentityUser(){
                 UserName=user.UserName,
-                Email=user.UserName
+                Email=user.UserName,
             };
 
             var result = await userManager.CreateAsync(AddUser,user.Password);

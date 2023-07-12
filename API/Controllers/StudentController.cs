@@ -16,7 +16,7 @@ namespace API.Controllers
             this.studentService = studentService;
         }
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> List()
         {
             var Student = await studentService.List();
